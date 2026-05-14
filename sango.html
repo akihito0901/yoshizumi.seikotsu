@@ -50,12 +50,12 @@
                 extend: {
                     colors: {
                         luxury: {
-                            black: '#5d5c58', // Warm Grey
-                            navy: '#8c9e8d',  // Sage Green
-                            gold: '#eebbcb',  // Soft Pink
-                            goldLight: '#fcefee', // Very Light Pink
+                            black: '#2c4a5a', // Dark Blue
+                            navy: '#4a7c96',  // Deep Blue
+                            gold: '#B5D5E2',  // Light Blue (Target)
+                            goldLight: '#f7fbfe', // Very Light Blue
                             white: '#fdfbf7', // Ivory
-                            accent: '#ff7e67', // Coral
+                            accent: '#FFDF73', // Yellow (Accent)
                             line: '#06C755',
                         }
                     },
@@ -64,7 +64,7 @@
                         sans: ['Zen Kaku Gothic New', 'sans-serif'],
                     },
                     backgroundImage: {
-                        'gold-gradient': 'linear-gradient(135deg, #eebbcb 0%, #fcefee 50%, #eebbcb 100%)',
+                        'gold-gradient': 'linear-gradient(135deg, #B5D5E2 0%, #f7fbfe 50%, #B5D5E2 100%)',
                     },
                     animation: {
                         'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -88,7 +88,7 @@
         }
 
         .gold-text {
-            background: linear-gradient(to right, #eebbcb, #fff0f5, #eebbcb);
+            background: linear-gradient(to right, #B5D5E2, #f7fbfe, #B5D5E2);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-size: 200% auto;
@@ -191,7 +191,7 @@
 
                 <div className="relative z-20 px-4 py-20 text-center">
                     <div className="inline-block border border-luxury-gold text-white bg-black/40 backdrop-blur-sm px-6 py-2 rounded-full text-sm mb-6 tracking-wide font-serif shadow-lg">
-                        産後の不調、我慢していませんか？
+                        無料体験実施中
                     </div>
                     <h1 className="flex flex-col gap-6 items-center font-serif font-bold mb-8 drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] text-shadow">
                         <span className="text-3xl">ママのための</span>
