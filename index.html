@@ -343,12 +343,17 @@
                         <p className="text-base leading-relaxed text-skin-dark font-black text-center mt-4 py-3 border-t border-skin-blush/40">
                             そうすることで<br />「繰り返す不調や乱れ」を<br /><span className="text-skin-rose text-lg">根本から解消</span>します。
                         </p>
-
-                        {/* Approach image */}
-                        <div className="mt-8 mb-4">
-                            <img src="./images/approach-new.png" alt="手技×最新電気機器で根本改善" className="w-full h-auto rounded-2xl shadow-lg border border-skin-peach/40" />
-                        </div>
                     </div>
+                </div>
+            );
+        };
+
+        /* ─── ⑤.5 アプローチの強み ─── */
+        const ApproachSection = () => {
+            const ref = useFadeUp();
+            return (
+                <div ref={ref} className="fade-up w-full bg-white">
+                    <img src="./images/approach-new.png" alt="手技×最新電気機器で根本改善" className="w-full h-auto block" />
                 </div>
             );
         };
@@ -717,6 +722,7 @@
                     <ProblemSection />
                     <CauseSection />
                     <SolutionSection />
+                    <ApproachSection />
                     <BenefitSection />
                     <FeatureSection />
                     <CustomerVoiceSection />
