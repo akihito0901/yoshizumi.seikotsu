@@ -340,17 +340,132 @@
                             </div>
                         </div>
 
-                        <p className="text-sm leading-[2] text-skin-dark/80 mb-3">
-                            当院独自の「Core調整整体」は、表面的なマッサージとは異なり、身体の軸となる<span className="text-skin-rose font-bold">体幹と骨盤の崩れ</span>をピンポイントで調整します。土台から整えることで、動きやすさを取り戻し、痛みが再発しにくい身体へと導いていきます。
-                        </p>
                         <p className="text-base leading-relaxed text-skin-dark font-black text-center mt-4 py-3 border-t border-skin-blush/40">
                             そうすることで<br />「繰り返す不調や乱れ」を<br /><span className="text-skin-rose text-lg">根本から解消</span>します。
                         </p>
+                    </div>
+                </div>
+            );
+        };
 
-                        {/* New approach image */}
-                        <div className="mt-8 mb-4">
-                            <img src="./images/approach-new.png" alt="手技×最新電気機器で根本改善" className="w-full h-auto rounded-2xl shadow-lg border border-skin-peach/40" />
+        /* ─── ⑤.5 アプローチの強み（新設セクション） ─── */
+        const CoreApproachSection = () => {
+            const ref = useFadeUp();
+            return (
+                <div ref={ref} className="fade-up px-5 py-12 bg-white">
+                    <div className="rainbow-card bg-white rounded-3xl p-6 shadow-xl border border-skin-peach/20">
+                        {/* Cause section */}
+                        <div className="text-center mb-10">
+                            <h3 className="text-[17px] font-bold text-skin-dark leading-relaxed mb-6">
+                                不調の原因は<br />
+                                <span className="text-skin-rose border-b-2 border-skin-rose/30">「その場しのぎのケア」</span>にあります。
+                            </h3>
+                            <div className="flex justify-between items-start gap-1 relative">
+                                {/* Flow steps */}
+                                <div className="flex-1 text-center relative z-10">
+                                    <div className="w-11 h-11 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-2 shadow-sm border border-blue-100">
+                                        <i className="fas fa-smile text-blue-400 text-lg"></i>
+                                    </div>
+                                    <p className="text-[9px] font-black leading-tight text-skin-dark/80">一時的に<br />楽になる</p>
+                                </div>
+                                <div className="pt-4 text-gray-300"><i className="fas fa-caret-right text-[10px]"></i></div>
+                                
+                                <div className="flex-1 text-center relative z-10">
+                                    <div className="w-11 h-11 mx-auto bg-red-50 rounded-full flex items-center justify-center mb-2 shadow-sm border border-red-100">
+                                        <i className="fas fa-exclamation-triangle text-red-400 text-lg"></i>
+                                    </div>
+                                    <p className="text-[9px] font-black leading-tight text-skin-dark/80">根本原因が<br />残っている</p>
+                                </div>
+                                <div className="pt-4 text-gray-300"><i className="fas fa-caret-right text-[10px]"></i></div>
+
+                                <div className="flex-1 text-center relative z-10">
+                                    <div className="w-11 h-11 mx-auto bg-gray-50 rounded-full flex items-center justify-center mb-2 shadow-sm border border-gray-200">
+                                        <i className="fas fa-user-clock text-gray-400 text-lg"></i>
+                                    </div>
+                                    <p className="text-[9px] font-black leading-tight text-skin-dark/80">日常のクセや<br />負担がかかる</p>
+                                </div>
+                                <div className="pt-4 text-gray-300"><i className="fas fa-caret-right text-[10px]"></i></div>
+
+                                <div className="flex-1 text-center relative z-10">
+                                    <div className="w-11 h-11 mx-auto bg-purple-50 rounded-full flex items-center justify-center mb-2 shadow-sm border border-purple-100">
+                                        <i className="fas fa-redo-alt text-purple-400 text-lg animate-spin-slow" style={{animationDuration: '6s'}}></i>
+                                    </div>
+                                    <p className="text-[9px] font-black leading-tight text-skin-dark/80">不調の<br />繰り返しへ</p>
+                                </div>
+                            </div>
                         </div>
+
+                        {/* Strong point catchphrase */}
+                        <div className="text-center mb-8 py-4 bg-skin-cream/40 rounded-2xl border border-skin-peach/20">
+                            <p className="text-[13px] font-black text-skin-dark leading-loose">
+                                当院の強み：<span className="text-skin-rose text-base">手技</span> × <span className="text-[#FFA500] text-base">最新電気機器</span><br />
+                                で<span className="text-skin-dark border-b-2 border-[#FFA500]/50">根本改善</span>を目指す！
+                            </p>
+                        </div>
+
+                        {/* Dual approach boxes */}
+                        <div className="relative space-y-4 mb-10">
+                            <div className="bg-white p-5 rounded-2xl border-2 border-skin-peach/30 shadow-sm">
+                                <h4 className="text-[15px] font-black text-skin-rose mb-2 flex items-center gap-2">
+                                    <i className="fas fa-hands text-lg"></i>
+                                    手技（整体・調整）
+                                </h4>
+                                <p className="text-[11px] font-black text-skin-dark/70 mb-3 ml-7">身体の土台から整える</p>
+                                <ul className="text-[11px] space-y-1.5 text-skin-dark/80 ml-7">
+                                    <li className="flex items-center gap-2"><i className="fas fa-check text-[8px] text-skin-rose"></i> 姿勢・骨格・筋肉のバランスを調整</li>
+                                    <li className="flex items-center gap-2"><i className="fas fa-check text-[8px] text-skin-rose"></i> 動きの根本原因にアプローチ</li>
+                                </ul>
+                            </div>
+
+                            <div className="flex justify-center -my-3 relative z-20">
+                                <div className="bg-skin-rose text-white text-[11px] font-black px-6 py-1.5 rounded-full shadow-lg animate-bounce-subtle">
+                                    <i className="fas fa-sync-alt mr-2"></i>交互にアプローチ
+                                </div>
+                            </div>
+
+                            <div className="bg-white p-5 rounded-2xl border-2 border-blue-100 shadow-sm">
+                                <h4 className="text-[15px] font-black text-blue-500 mb-2 flex items-center gap-2">
+                                    <i className="fas fa-bolt text-lg"></i>
+                                    最新電気機器
+                                </h4>
+                                <p className="text-[11px] font-black text-skin-dark/70 mb-3 ml-7">深部の筋肉や神経にアプローチ</p>
+                                <ul className="text-[11px] space-y-1.5 text-skin-dark/80 ml-7">
+                                    <li className="flex items-center gap-2"><i className="fas fa-check text-[8px] text-blue-400"></i> 深部の筋肉をゆるめる・活性化</li>
+                                    <li className="flex items-center gap-2"><i className="fas fa-check text-[8px] text-blue-400"></i> 回復力を高め、痛みの再発を予防</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        {/* Benefits summary */}
+                        <div className="text-center bg-gradient-to-br from-skin-cream to-white p-6 rounded-3xl border border-skin-peach/20 shadow-inner">
+                            <p className="text-[13px] font-black text-skin-dark mb-6">
+                                <i className="fas fa-sparkles text-[#FFA500] mr-2"></i>この組み合わせで得られる効果
+                            </p>
+                            <div className="grid grid-cols-3 gap-3">
+                                <div className="text-center">
+                                    <div className="w-10 h-10 mx-auto bg-white rounded-full shadow-sm flex items-center justify-center mb-2 border border-skin-peach/10">
+                                        <i className="fas fa-heart-circle-check text-skin-rose text-xl"></i>
+                                    </div>
+                                    <p className="text-[9px] font-black text-skin-dark leading-tight">痛みの<br />根本改善</p>
+                                </div>
+                                <div className="text-center">
+                                    <div className="w-10 h-10 mx-auto bg-white rounded-full shadow-sm flex items-center justify-center mb-2 border border-skin-peach/10">
+                                        <i className="fas fa-shield-virus text-skin-rose text-xl"></i>
+                                    </div>
+                                    <p className="text-[9px] font-black text-skin-dark leading-tight">再発しにくい<br />身体づくり</p>
+                                </div>
+                                <div className="text-center">
+                                    <div className="w-10 h-10 mx-auto bg-white rounded-full shadow-sm flex items-center justify-center mb-2 border border-skin-peach/10">
+                                        <i className="fas fa-running text-skin-rose text-xl"></i>
+                                    </div>
+                                    <p className="text-[9px] font-black text-skin-dark leading-tight">動きやすさ・<br />可動域の向上</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p className="text-center text-[11px] font-black text-skin-dark/40 mt-8">
+                            不調を、根本から改善していきます。
+                        </p>
                     </div>
                 </div>
             );
@@ -720,6 +835,7 @@
                     <ProblemSection />
                     <CauseSection />
                     <SolutionSection />
+                    <CoreApproachSection />
                     <BenefitSection />
                     <FeatureSection />
                     <CustomerVoiceSection />
