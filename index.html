@@ -71,7 +71,7 @@
                         },
                         flashText: {
                             '0%, 100%': { opacity: '0.9', color: '#ffffff', textShadow: '0 0 5px rgba(255,255,255,0.5)' },
-                            '50%': { opacity: '1', color: '#FFDF73', textShadow: '0 0 10px rgba(255,223,115,0.8)' },
+                            '50%': { opacity: '1', color: '#FFA500', textShadow: '0 0 10px rgba(255,165,0,0.8)' },
                         },
                         fadeIn: {
                             '0%': { opacity: '0' },
@@ -139,8 +139,8 @@
         .rainbow-card { animation: bounce-subtle 2s ease-in-out infinite; }
 
         @keyframes pulse-glow {
-            0%, 100% { text-shadow: 0 0 6px rgba(255,223,115,0.4), 0 2px 6px rgba(0,0,0,0.8); opacity: 0.8; }
-            50% { text-shadow: 0 0 20px rgba(255,223,115,1), 0 0 40px rgba(255,223,115,0.7), 0 2px 6px rgba(0,0,0,0.8); opacity: 1; }
+            0%, 100% { text-shadow: 0 0 6px rgba(255,165,0,0.4), 0 2px 6px rgba(0,0,0,0.8); opacity: 0.8; }
+            50% { text-shadow: 0 0 20px rgba(255,165,0,1), 0 0 40px rgba(255,165,0,0.7), 0 2px 6px rgba(0,0,0,0.8); opacity: 1; }
         }
         .badge-glow { animation: pulse-glow 1.8s ease-in-out infinite; }
     </style>
@@ -231,11 +231,11 @@
                             <span className="block text-[28px] font-black leading-[1.2] text-skin-peach">姿勢と動き</span>
                         </h1>
                         <p className="badge-glow font-black tracking-wide mb-4 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] leading-tight">
-                            <span className="text-white text-[16px]">動きやすさと</span><span className="text-[#FFDF73] text-[28px]">再発防止を！</span>
+                            <span className="text-white text-[16px]">動きやすさと</span><span className="text-[#FFA500] text-[28px]">再発防止を！</span>
                         </p>
 
                         <p className="text-[15px] text-white/90 leading-relaxed mb-5 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] max-w-[270px]">
-                            その原因、実は<br /><span className="text-[#FFDF73] font-bold">体幹の乱れと骨盤の歪み</span>です。
+                            その原因、実は<br /><span className="text-[#FFA500] font-bold">体幹の乱れと骨盤の歪み</span>です。
                         </p>
 
                         {/* Price */}
@@ -250,7 +250,7 @@
                                 </div>
                                 <i className="fas fa-caret-right text-skin-peach text-sm drop-shadow-md"></i>
                                 <div className="flex items-baseline">
-                                    <span className="font-black text-[42px] tracking-tight leading-none drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)] text-[#FFDF73]">無料</span>
+                                    <span className="font-black text-[42px] tracking-tight leading-none drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)] text-[#FFA500]">無料</span>
                                 </div>
                             </div>
                         </div>
@@ -287,7 +287,7 @@
             const ref = useFadeUp();
             return (
                 <div ref={ref} className="fade-up w-full">
-                    <img src="./images/problem-new.png" alt="痛みが当たり前になり、日常生活がつらくなります" className="w-full h-auto block" />
+                    <img src="./images/problem-new-v2.png" alt="痛みが当たり前になり、日常生活がつらくなります" className="w-full h-auto block" />
                 </div>
             );
         };
