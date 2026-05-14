@@ -583,6 +583,16 @@
             );
         };
 
+        /* ─── ⑨.5 追伸（写真） ─── */
+        const PostscriptSection = () => {
+            const ref = useFadeUp();
+            return (
+                <div ref={ref} className="fade-up w-full bg-white">
+                    <img src="./images/cta-new.png" alt="施術風景" className="w-full h-auto block" />
+                </div>
+            );
+        };
+
         /* ─── ⑩ CTA + LINE特典 (最後の一押し) ─── */
         const FinalCTA = () => {
             const ref = useFadeUp();
@@ -726,6 +736,7 @@
                     <BenefitSection />
                     <FeatureSection />
                     <QASection />
+                    <PostscriptSection />
                     <FinalCTA />
                     <Footer />
                     <StickyCTA />
