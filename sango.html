@@ -19,11 +19,11 @@
             s.parentNode.insertBefore(t, s)
         }(window, document, 'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '752934397862087');
+        fbq('init', '2090618005220001');
         fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=752934397862087&ev=PageView&noscript=1" /></noscript>
+            src="https://www.facebook.com/tr?id=2090618005220001&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
 
     <!-- React & ReactDOM -->
@@ -132,25 +132,6 @@
             }
         }
     </style>
-    <!-- Meta Pixel Code -->
-    <script>
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-            n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1458757641929030');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=1458757641929030&ev=PageView&noscript=1" /></noscript>
-    <!-- End Meta Pixel Code -->
 </head>
 
 <body class="bg-[#fdfbf7] text-[#5d5c58] antialiased pb-24 md:pb-0">
@@ -376,7 +357,7 @@
                             </p>
                         </div>
 
-                        <a href="https://lin.ee/uqCRkRL" onClick={() => window.fbq('track', 'Lead')} className="block w-full bg-gradient-to-r from-green-400 to-green-500 text-white font-bold text-lg py-5 rounded-full shadow-[0_4px_14px_0_rgba(74,222,128,0.39)] transform active:scale-95 transition-all hover:brightness-105 shine-effect">
+                        <a href="https://lin.ee/uqCRkRL" onClick={() => window.fbq('track', 'Lead', {content_name: 'LINE友だち追加'})} className="block w-full bg-gradient-to-r from-green-400 to-green-500 text-white font-bold text-lg py-5 rounded-full shadow-[0_4px_14px_0_rgba(74,222,128,0.39)] transform active:scale-95 transition-all hover:brightness-105 shine-effect">
                             <div className="flex items-center justify-center gap-3">
                                 <i className="fab fa-line text-3xl"></i>
                                 <div className="text-left leading-none">
@@ -407,7 +388,7 @@
 
         const StickyCTA = () => (
             <div className="fixed bottom-0 left-0 w-full bg-white/95 backdrop-blur border-t border-gray-200 p-3 shadow-[0_-5px_20px_-5px_rgba(0,0,0,0.1)] z-50 flex justify-center">
-                <a href="https://lin.ee/uqCRkRL" onClick={() => window.fbq('track', 'Lead')} className="block w-full max-w-md bg-gradient-to-r from-green-400 to-green-500 text-white font-bold text-lg py-3 rounded-full shadow-lg text-center shine-effect transition-transform active:scale-95">
+                <a href="https://lin.ee/uqCRkRL" onClick={() => window.fbq('track', 'Lead', {content_name: 'LINE友だち追加'})} className="block w-full max-w-md bg-gradient-to-r from-green-400 to-green-500 text-white font-bold text-lg py-3 rounded-full shadow-lg text-center shine-effect transition-transform active:scale-95">
                     <span className="flex items-center justify-center gap-2">
                         <i className="fab fa-line text-xl"></i>
                         <span className="drop-shadow-sm text-lg">簡単30秒で予約</span>

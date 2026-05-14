@@ -20,11 +20,11 @@
             s.parentNode.insertBefore(t, s)
         }(window, document, 'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '752934397862087');
+        fbq('init', '2090618005220001');
         fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=752934397862087&ev=PageView&noscript=1" /></noscript>
+            src="https://www.facebook.com/tr?id=2090618005220001&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
 
     <!-- React & ReactDOM -->
@@ -181,7 +181,7 @@
         /* ─── LINE CTA ─── */
         const LineCTA = ({ className = "" }) => (
             <div className={`w-full px-4 ${className}`}>
-                <a href="https://lin.ee/uqCRkRL" onClick={() => window.fbq('track', 'Lead')}
+                <a href="https://lin.ee/uqCRkRL" onClick={() => window.fbq('track', 'Lead', {content_name: 'LINE友だち追加'})}
                    className="block w-full bg-gradient-to-br from-[#06C755] to-[#04a044] text-white font-bold py-5 rounded-xl shadow-[0_10px_30px_rgba(6,199,85,0.4)] hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(6,199,85,0.5)] active:scale-[0.97] transition-all relative overflow-hidden group">
                     <div className="absolute inset-0 w-1/4 h-full bg-white/20 skew-x-12 -ml-10 group-hover:ml-[120%] transition-all duration-700"></div>
                     <div className="flex flex-col items-center gap-1 relative z-10">
@@ -661,7 +661,7 @@
             <div className="fixed bottom-0 left-0 w-full bg-white/95 backdrop-blur border-t border-skin-peach/40 p-2 shadow-[0_-5px_20px_rgba(0,0,0,0.08)] z-[100]">
                 <div className="max-w-md mx-auto flex gap-2">
                     <div className="flex-1"></div>
-                    <a href="https://lin.ee/uqCRkRL" onClick={() => window.fbq('track', 'Lead')}
+                    <a href="https://lin.ee/uqCRkRL" onClick={() => window.fbq('track', 'Lead', {content_name: 'LINE友だち追加'})}
                        className="flex-[2] flex items-center justify-center bg-[#06C755] text-white rounded-full py-3 shadow-md active:scale-95 transition-all text-[15px] font-bold leading-tight text-center">
                         <i className="fab fa-line text-2xl mr-2"></i>
                         <span>LINEでオープン限定<br />無料予約はこちら</span>
