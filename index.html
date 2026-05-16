@@ -203,6 +203,11 @@
                     <div className="flex-shrink-0">
                         <span className="text-skin-dark font-black text-lg tracking-tighter">平成よしずみ整骨院</span>
                     </div>
+                    <a href="https://maps.app.goo.gl/X5SN33wwjqCfnBEF8" target="_blank" rel="noopener noreferrer"
+                       className="flex items-center gap-1.5 bg-skin-rose text-white text-[11px] font-bold px-3 py-1.5 rounded-full shadow-sm active:scale-95 transition-all">
+                        <i className="fas fa-map-marker-alt text-xs"></i>
+                        <span>Googleマップ</span>
+                    </a>
                 </div>
             </div>
         );
@@ -649,13 +654,16 @@
         const StickyCTA = () => (
             <div className="fixed bottom-0 left-0 w-full bg-white/95 backdrop-blur border-t border-skin-peach/40 p-2 shadow-[0_-5px_20px_rgba(0,0,0,0.08)] z-[100]">
                 <div className="max-w-md mx-auto flex gap-2">
-                    <div className="flex-1"></div>
-                    <a href="https://lin.ee/NaWIq1n" onClick={() => window.fbq('track', 'Lead', {content_name: 'LINE友だち追加'})}
-                       className="flex-[2] flex items-center justify-center bg-[#06C755] text-white rounded-full py-3 shadow-md active:scale-95 transition-all text-[15px] font-bold leading-tight text-center">
-                        <i className="fab fa-line text-2xl mr-2"></i>
-                        <span>LINEでオープン限定<br />無料予約はこちら</span>
+                    <a href="tel:0962378828"
+                       className="flex-1 flex items-center justify-center bg-[#d9736e] text-white rounded-full py-3 shadow-md active:scale-95 transition-all text-[13px] font-bold leading-tight text-center">
+                        <i className="fas fa-phone text-xl mr-2"></i>
+                        <span>今すぐ電話で<br />来店予約</span>
                     </a>
-                    <div className="flex-1"></div>
+                    <a href="https://lin.ee/NaWIq1n" onClick={() => window.fbq('track', 'Lead', {content_name: 'LINE友だち追加'})}
+                       className="flex-1 flex items-center justify-center bg-[#06C755] text-white rounded-full py-3 shadow-md active:scale-95 transition-all text-[13px] font-bold leading-tight text-center">
+                        <i className="fab fa-line text-xl mr-2"></i>
+                        <span>LINEで空き状況を<br />今すぐ確認</span>
+                    </a>
                 </div>
             </div>
         );
