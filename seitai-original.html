@@ -350,91 +350,11 @@
             </div>
         );
 
-        const WelcomeModal = () => {
-            const [isOpen, setIsOpen] = useState(false);
-            const [count, setCount] = useState(12);
 
-            useEffect(() => {
-                // Open after a short delay for effect
-                const timer = setTimeout(() => setIsOpen(true), 800);
-
-                // Viewer counter logic
-                const interval = setInterval(() => {
-                    setCount(prev => Math.min(25, Math.max(8, prev + Math.floor(Math.random() * 3) - 1)));
-                }, 3000);
-
-                return () => {
-                    clearTimeout(timer);
-                    clearInterval(interval);
-                };
-            }, []);
-
-            if (!isOpen) return null;
-
-            return (
-                <div className="fixed inset-0 z-[100] flex items-center justify-center px-4 bg-black/80 backdrop-blur-sm fade-in">
-                    <div className="bg-white rounded-lg shadow-2xl w-full max-w-sm overflow-hidden relative animate-slide-up border-2 border-luxury-gold">
-                        {/* Close Button */}
-                        <button onClick={() => setIsOpen(false)} className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 z-10 p-2">
-                            <i className="fas fa-times text-xl"></i>
-                        </button>
-
-                        <div className="bg-luxury-navy text-white text-center py-4 relative overflow-hidden">
-                            <div className="absolute inset-0 bg-luxury-gold/20 animate-pulse"></div>
-                            <h3 className="relative z-10 font-serif font-bold text-xl drop-shadow-md">
-                                <i className="fas fa-crown text-luxury-gold mr-2"></i>
-                                おめでとうございます！
-                            </h3>
-                            <p className="relative z-10 text-xs text-luxury-goldLight mt-1">まだ間に合います！</p>
-                        </div>
-
-                        <div className="p-6 text-center">
-                            <div className="inline-block bg-red-50 text-red-600 text-xs font-bold px-3 py-1 rounded-full mb-4 border border-red-100">
-                                <span className="w-2 h-2 bg-red-500 rounded-full inline-block mr-2 animate-ping"></span>
-                                現在 {count} 名が閲覧中
-                            </div>
-
-                            <div className="mb-6 space-y-2">
-                                <p className="text-sm font-bold text-gray-600">\ 大好評につき期間延長 /</p>
-                                <p className="text-xl font-bold text-luxury-navy font-serif">
-                                    2月28日まで
-                                </p>
-
-                                <div className="py-2">
-                                    <p className="text-xs text-gray-400 line-through mb-0.5">通常初回 6,400円</p>
-                                    <div className="text-5xl font-black text-luxury-accent font-serif leading-none drop-shadow-sm">
-                                        1,980<span className="text-lg font-bold ml-1 text-gray-600">円</span>
-                                    </div>
-                                </div>
-
-                                <div className="text-xl font-black text-white bg-red-600 inline-block px-6 py-1 rounded-full transform -rotate-1 shadow-md border-2 border-white/50">
-                                    <span className="text-xs font-normal mr-1">残り</span>
-                                    8
-                                    <span className="text-xs font-normal ml-1">名</span>
-                                </div>
-                            </div>
-
-                            <button onClick={() => { setIsOpen(false); document.getElementById('voices').scrollIntoView({ behavior: 'smooth' }); }} className="block w-full bg-gradient-to-r from-luxury-navy to-gray-800 text-white font-bold text-lg py-5 rounded shadow-lg transform active:scale-95 transition-all hover:brightness-110 relative overflow-hidden group">
-                                <div className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
-                                <span className="relative flex items-center justify-center gap-2">
-                                    <i className="fas fa-comments text-2xl text-luxury-gold"></i>
-                                    実績・口コミを確認する
-                                </span>
-                            </button>
-
-                            <button onClick={() => setIsOpen(false)} className="mt-4 text-xs text-gray-400 underline hover:text-gray-600">
-                                閉じてサイトを見る
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            );
-        };
 
         const App = () => {
             return (
                 <div className="w-full max-w-md mx-auto shadow-2xl bg-white min-h-screen relative my-0 md:my-8 font-sans">
-                    <WelcomeModal />
                     <SocialProof />
                     <Hero />
                     <Voices />
