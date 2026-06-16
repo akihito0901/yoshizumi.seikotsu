@@ -27,34 +27,6 @@
             src="https://www.facebook.com/tr?id=2090618005220001&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
 
-    <!-- トラッキング用プレーンJS関数（React/Babel非依存） -->
-    <script>
-        function trackLINE() {
-            if (window.fbq) {
-                window.fbq('track', 'Lead', { content_name: 'LINE友だち追加' });
-            }
-            setTimeout(function () {
-                window.location.href = 'https://lin.ee/NaWIq1n';
-            }, 400);
-        }
-        function trackPhone() {
-            if (window.fbq) {
-                window.fbq('track', 'Lead', { content_name: '電話クリック' });
-            }
-            setTimeout(function () {
-                window.location.href = 'tel:0962378828';
-            }, 400);
-        }
-        function trackGoogleMap() {
-            if (window.fbq) {
-                window.fbq('track', 'Lead', { content_name: 'GoogleMapクリック' });
-            }
-            setTimeout(function () {
-                window.open('https://maps.app.goo.gl/X5SN33wwjqCfnBEF8', '_blank');
-            }, 400);
-        }
-    </script>
-
     <!-- React & ReactDOM -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
@@ -198,6 +170,31 @@
     </script>
     <div id="root"></div>
 
+    <!-- Metaピクセル Leadトラッキング（React/JSX完全非依存・イベントデリゲーション方式） -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.body.addEventListener('click', function (e) {
+                var link = e.target.closest('a[href]');
+                if (!link) return;
+                var href = link.getAttribute('href') || '';
+
+                if (href.indexOf('lin.ee') !== -1) {
+                    e.preventDefault();
+                    if (window.fbq) window.fbq('track', 'Lead', { content_name: 'LINE友だち追加' });
+                    setTimeout(function () { window.location.href = href; }, 400);
+                } else if (href.indexOf('tel:') === 0) {
+                    e.preventDefault();
+                    if (window.fbq) window.fbq('track', 'Lead', { content_name: '電話クリック' });
+                    setTimeout(function () { window.location.href = href; }, 400);
+                } else if (href.indexOf('maps.app.goo.gl') !== -1) {
+                    e.preventDefault();
+                    if (window.fbq) window.fbq('track', 'Lead', { content_name: 'GoogleMapクリック' });
+                    setTimeout(function () { window.open(href, '_blank'); }, 400);
+                }
+            });
+        });
+    </script>
+
     <script type="text/babel">
         const { useState, useEffect, useRef } = React;
 
@@ -217,7 +214,7 @@
         /* ─── LINE CTA ─── */
         const LineCTA = ({ className = "" }) => (
             <div className={`w-full px-4 ${className}`}>
-                <a href="https://lin.ee/NaWIq1n" onClick={(e) => { e.preventDefault(); window.trackLINE(); }}
+                <a href="https://lin.ee/NaWIq1n"
                    className="block w-full bg-gradient-to-br from-[#06C755] to-[#04a044] text-white font-bold py-5 rounded-xl shadow-[0_10px_30px_rgba(6,199,85,0.4)] hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(6,199,85,0.5)] active:scale-[0.97] transition-all relative overflow-hidden group">
                     <div className="absolute inset-0 w-1/4 h-full bg-white/20 skew-x-12 -ml-10 group-hover:ml-[120%] transition-all duration-700"></div>
                     <div className="flex flex-col items-center gap-1 relative z-10">
@@ -239,7 +236,7 @@
                     <div className="flex-shrink-0">
                         <span className="text-skin-dark font-black text-lg tracking-tighter">平成よしずみ整骨院</span>
                     </div>
-                    <a href="https://maps.app.goo.gl/X5SN33wwjqCfnBEF8" onClick={(e) => { e.preventDefault(); window.trackGoogleMap(); }}
+                    <a href="https://maps.app.goo.gl/X5SN33wwjqCfnBEF8"
                        className="flex items-center gap-1.5 bg-skin-rose text-white text-[11px] font-bold px-3 py-1.5 rounded-full shadow-sm active:scale-95 transition-all">
                         <i className="fas fa-map-marker-alt text-xs"></i>
                         <span>Googleマップ</span>
@@ -692,12 +689,12 @@
         const StickyCTA = () => (
             <div className="fixed bottom-0 left-0 w-full bg-white/95 backdrop-blur border-t border-skin-peach/40 p-2 shadow-[0_-5px_20px_rgba(0,0,0,0.08)] z-[100]">
                 <div className="max-w-md mx-auto flex gap-2">
-                    <a href="tel:0962378828" onClick={(e) => { e.preventDefault(); window.trackPhone(); }}
+                    <a href="tel:0962378828"
                        className="flex-1 flex items-center justify-center bg-[#d9736e] text-white rounded-full py-3 shadow-md active:scale-95 transition-all text-[13px] font-bold leading-tight text-center">
                         <i className="fas fa-phone text-xl mr-2"></i>
                         <span>今すぐ電話で<br />来店予約</span>
                     </a>
-                    <a href="https://lin.ee/NaWIq1n" onClick={(e) => { e.preventDefault(); window.trackLINE(); }}
+                    <a href="https://lin.ee/NaWIq1n"
                        className="flex-1 flex items-center justify-center bg-[#06C755] text-white rounded-full py-3 shadow-md active:scale-95 transition-all text-[13px] font-bold leading-tight text-center">
                         <i className="fab fa-line text-xl mr-2"></i>
                         <span>LINEで空き状況を<br />今すぐ確認</span>
@@ -719,4 +716,23 @@
                     <EmpathySection />
                     <ProblemSection />
                     <CauseSection />
-         
+                    <SolutionSection />
+                    <ApproachSection />
+                    <BenefitSection />
+                    <FeatureSection />
+                    <QASection />
+
+                    <FinalCTA />
+                    <Footer />
+                    <StickyCTA />
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+        requestAnimationFrame(() => { window.scrollTo(0, 0); });
+    </script>
+</body>
+
+</html>
