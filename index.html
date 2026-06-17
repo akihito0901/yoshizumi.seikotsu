@@ -407,7 +407,7 @@
                     num: "01",
                     title: <>独自の「Core調整」アプローチ<br />土台から整える最新技術</>,
                     desc: "表面の筋肉だけを揉みほぐす一般的な施術とは異なり、身体の核となる体幹と骨盤の歪みに直接アプローチ。動きやすさと再発防止に特化した独自の調整技術です。",
-                    mediaSrc: "./images/technique.mp4",
+                    mediaSrc: "./images/feature-1-c.mp4",
                     isVideo: true,
                 },
                 {
@@ -417,14 +417,28 @@
                     mediaSrc: "./images/counseling-new.png",
                     isVideo: false,
                 },
+                {
+                    num: "03",
+                    title: <>最新電気機器を導入<br />効果を最大化する複合アプローチ</>,
+                    desc: "熟練の手技と最新の電気機器を組み合わせることにより、深部へのアプローチと血流改善・筋肉弛緩を同時に実現。お一人おひとりの状態に合わせ、施術効果を最大限に引き出します。",
+                    mediaSrc: "./images/feature-3-c.mp4",
+                    isVideo: true,
+                },
+                {
+                    num: "04",
+                    title: <>清潔で新しい院内<br />リラックスできる空間づくり</>,
+                    desc: "2026年6月にオープンしたばかりの清潔な院内。待合室にはウォーターサーバーを完備し、落ち着いた音楽の中でリラックスしながらお待ちいただけます。",
+                    mediaSrc: "./images/feature-4-c.mp4",
+                    isVideo: true,
+                },
             ];
 
             return (
                 <div ref={ref} className="fade-up w-full bg-skin-cream">
                     <div className="px-5 pt-14 pb-8 text-center">
-                        <span className="text-skin-rose text-[10px] tracking-[0.3em] font-bold block mb-4">2 REASONS</span>
+                        <span className="text-skin-rose text-[10px] tracking-[0.3em] font-bold block mb-4">4 REASONS</span>
                         <h2 className="text-2xl font-bold text-skin-dark leading-relaxed">
-                            当院が選ばれる<br /><span className="text-skin-rose">2つの理由</span>
+                            当院が選ばれる<br /><span className="text-skin-rose">4つの理由</span>
                         </h2>
                     </div>
 
@@ -447,6 +461,27 @@
                             </div>
                         </div>
                     ))}
+                </div>
+            );
+        };
+
+        /* ─── 早めのケアセクション ─── */
+        const EarlyCareSection = () => {
+            const ref = useFadeUp();
+            return (
+                <div ref={ref} className="fade-up w-full bg-white px-5 py-14 text-center">
+                    <span className="text-skin-rose text-[10px] tracking-[0.3em] font-bold block mb-4">POINT</span>
+                    <h2 className="text-2xl font-bold text-skin-dark leading-relaxed mb-6">
+                        だからこそ、<br /><span className="text-skin-rose">早めのケアが大切！</span>
+                    </h2>
+                    <div className="max-w-xs mx-auto bg-skin-cream rounded-2xl p-6 text-left shadow-sm border border-skin-peach/40">
+                        <p className="text-sm text-skin-text/70 leading-relaxed">
+                            「少し痛いけど、まだ我慢できる」<br />
+                            「そのうち治るだろう」<br /><br />
+                            そう思って放置してしまうと、体の歪みはどんどん蓄積され、<span className="font-bold text-skin-rose">慢性化・重症化のリスク</span>が高まります。<br /><br />
+                            気になる症状は、<span className="font-bold text-skin-dark">早めのケアで根本から改善</span>しましょう。
+                        </p>
+                    </div>
                 </div>
             );
         };
@@ -695,11 +730,11 @@
                     <Headline />
                     <EmpathySection />
                     <ProblemSection />
-                    <CauseSection />
-                    <SolutionSection />
-                    <ApproachSection />
-                    <BenefitSection />
                     <FeatureSection />
+                    <CauseSection />
+                    <EarlyCareSection />
+                    <SolutionSection />
+                    <BenefitSection />
                     <QASection />
 
                     <FinalCTA />
