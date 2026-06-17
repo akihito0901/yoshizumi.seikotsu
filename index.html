@@ -313,7 +313,7 @@
             return (
                 <div ref={ref} className="fade-up w-full">
 
-                    <img src="./images/cause-new.png" alt="適切なケアを行うことでつらさを改善" className="w-full h-auto block" />
+                    <img src="./images/cause-new.webp" alt="早めのケアが大切！つらさの改善だけでなく戻りにくい身体づくりへ" className="w-full h-auto block" />
                 </div>
             );
         };
@@ -325,7 +325,7 @@
                 <div ref={ref} className="fade-up w-full bg-skin-peach">
                     <div className="px-5 pt-14 pb-6 text-center">
                         <h2 className="text-2xl font-bold text-skin-dark mb-4 leading-relaxed">
-                            当院の<br /><span className="text-skin-rose">「Core調整整体」</span>は、<br />それを解決できます！
+                            繰り返す不調こそ、<br />今、早めのケアを。<br /><span className="text-skin-rose">「Core調整整体」</span>が<br />根本から解決します！
                         </h2>
                     </div>
 
@@ -461,27 +461,6 @@
                             </div>
                         </div>
                     ))}
-                </div>
-            );
-        };
-
-        /* ─── 早めのケアセクション ─── */
-        const EarlyCareSection = () => {
-            const ref = useFadeUp();
-            return (
-                <div ref={ref} className="fade-up w-full bg-white px-5 py-14 text-center">
-                    <span className="text-skin-rose text-[10px] tracking-[0.3em] font-bold block mb-4">POINT</span>
-                    <h2 className="text-2xl font-bold text-skin-dark leading-relaxed mb-6">
-                        だからこそ、<br /><span className="text-skin-rose">早めのケアが大切！</span>
-                    </h2>
-                    <div className="max-w-xs mx-auto bg-skin-cream rounded-2xl p-6 text-left shadow-sm border border-skin-peach/40">
-                        <p className="text-sm text-skin-text/70 leading-relaxed">
-                            「少し痛いけど、まだ我慢できる」<br />
-                            「そのうち治るだろう」<br /><br />
-                            そう思って放置してしまうと、体の歪みはどんどん蓄積され、<span className="font-bold text-skin-rose">慢性化・重症化のリスク</span>が高まります。<br /><br />
-                            気になる症状は、<span className="font-bold text-skin-dark">早めのケアで根本から改善</span>しましょう。
-                        </p>
-                    </div>
                 </div>
             );
         };
@@ -732,7 +711,6 @@
                     <ProblemSection />
                     <FeatureSection />
                     <CauseSection />
-                    <EarlyCareSection />
                     <SolutionSection />
                     <BenefitSection />
                     <QASection />
