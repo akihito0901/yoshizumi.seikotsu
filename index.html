@@ -257,7 +257,7 @@
                             <div className="flex items-baseline justify-center sm:justify-start gap-2 flex-wrap">
                                 <div className="flex items-baseline gap-1 opacity-90 whitespace-nowrap">
                                     <span className="text-[12px]">通常</span>
-                                    <span className="text-base sm:text-lg line-through">4,400円</span>
+                                    <span className="text-base sm:text-lg line-through">6,400円</span>
                                 </div>
                                 <i className="fas fa-caret-right text-skin-peach text-lg sm:text-xl drop-shadow-md hidden sm:block"></i>
                                 <div className="flex items-baseline gap-1 mt-1 whitespace-nowrap">
@@ -570,8 +570,8 @@
             const ref = useFadeUp();
             const qaData = [
                 { q: "駐車場はありますか？", a: "詳細なアクセスについてはLINEにてお問い合わせ下さい。" },
-                { q: "何回の通院でなおりますか？", a: "症状や個人差がありますが、多くの方が数回の施術で身体の変化を実感されています。初回のカウンセリングで、お身体の状態に合わせた最適なプランをお伝えします。" },
-                { q: "料金はいくらですか？", a: "通常は\n・Core調整整体＋初診料 → 4,400円\n\nですが…\n\n＼新規オープン記念／\n初回体験 1,980円で受けていただけます。\n\n※6月1日〜11日の10日間限定、各日8名様（合計80名様）限定のキャンペーンです。\n定員に達し次第終了となりますので、お早めにLINEよりお申し込みください。" },
+                { q: "何回の通院でなおりますか？", a: "症状や個人差がありますが、多くの方が3〜5回の施術で大きな変化を実感されています。初回のカウンセリングで、おおよその回数をお伝えします。" },
+                { q: "料金はいくらですか？", a: "通常は\n・Core調整整体＋初診料 → 6,400円\n\nですが…\n\n＼新規オープン記念／\n初回体験 1,980円で受けていただけます。\n\n※6月1日〜11日の10日間限定、各日8名様（合計80名様）限定のキャンペーンです。\n定員に達し次第終了となりますので、お早めにLINEよりお申し込みください。" },
                 { q: "どれくらいの頻度で通院したらいいですか？", a: "最初は週1〜2回のペースをおすすめしています。改善に伴い、徐々に間隔を空けていきます。" },
                 { q: "受付時間を教えてください", a: "10:00〜14:00 / 15:00〜20:00（月曜〜土曜・祝日）です。日曜日は休診です。" },
                 { q: "軽い症状でも行っていいですか？", a: "もちろんです！軽い症状のうちからケアすることで、重症化を予防できます。お気軽にご相談ください。" },
@@ -579,6 +579,9 @@
                 { q: "施術時間はどれくらいですか？", a: "初回はカウンセリング含め約60分、2回目以降は約30〜40分を目安としております。" },
                 { q: "毎回担当は変わりますか？", a: "いいえ、完全担当制です。毎回同じ施術者が担当するため、お身体の変化をしっかり把握しながら施術を行います。" },
                 { q: "支払い方法は？", a: "現金のほか、各種クレジットカード、電子マネーがご利用いただけます。" },
+                { q: "予約はどうしたらいいですか？", a: "お電話・LINEどちらでもご予約いただけますが、LINE予約がおすすめです。\n\n施術中はお電話に出られない場合があるため、LINEの方がスムーズにご案内できます。\nまた、LINEでは空き状況の確認や24時間予約が可能です。\n\nご都合の良い時間を選んで、お気軽にご予約ください。" },
+                { q: "ボキボキする施術ですか？", a: "いいえ、当院では無理に関節を鳴らすようなボキボキ施術は行っておりません。\n\n体幹・骨盤を中心に、手技でやさしく筋肉や関節の動きを整えていきます。\n「整体が初めてで不安」「強い刺激が苦手」という方にも安心して受けていただける施術です。" },
+                { q: "整骨院が初めてですが大丈夫ですか？", a: "もちろん大丈夫です。\n\n当院には「整骨院や整体に行くのが初めて」という方も多く来院されています。\n初回は現在のお悩みや生活習慣についてしっかりお話を伺い、お身体の状態を確認したうえで施術を行います。\nわからないことや不安なことがあれば、その都度ご説明いたしますのでご安心ください。" },
             ];
 
             const [openIdx, setOpenIdx] = useState(null);
@@ -646,7 +649,7 @@
                             <div>
                                 <span className="inline-block bg-white/20 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded-full mb-3 border border-white/30">初回限定・特別価格</span>
                                 <div className="flex items-baseline gap-2 mb-1">
-                                    <span className="text-white/60 text-sm line-through">通常 4,400円</span>
+                                    <span className="text-white/60 text-sm line-through">通常 6,400円</span>
                                 </div>
                                 <div className="flex items-baseline">
                                     <span className="font-black text-[52px] tracking-tight leading-none drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]">1,980</span><span className="text-2xl font-bold">円</span>
