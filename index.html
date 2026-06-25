@@ -227,63 +227,8 @@
 
         /* ─── ① ヘッドライン ─── */
         const Headline = () => (
-            <div className="relative text-white overflow-hidden">
-                <div className="absolute inset-0 bg-white/15 z-[5]"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/15 to-transparent z-10"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/25 z-10"></div>
-                <div className="absolute inset-0 z-0">
-                    <video src="./images/hero-new2.mp4" autoPlay muted loop playsInline className="w-full h-full object-cover" />
-                </div>
-
-                <div className="relative z-20 px-6 pt-20 pb-8 min-h-[600px] flex flex-col justify-end">
-
-                    {/* BOTTOM: Catch copy + Price — left-aligned */}
-                    <div className="text-left w-full mt-auto">
-                        {/* Target text */}
-                        <p className="text-white text-[13px] font-bold tracking-widest mb-2 drop-shadow-md animate-flash-text">
-                            ＼ 初回1,980円体験実施中 ／
-                        </p>
-
-                        <h1 className="mb-5 leading-tight drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)] tracking-tighter text-left">
-                            <span className="block text-[18px] md:text-[22px] font-bold text-white mb-2 tracking-widest drop-shadow-md">最新機器と熟練の施術で</span>
-                            <span className="block text-[28px] md:text-[34px] font-black text-white mb-3 drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">カラダの芯から整える</span>
-                        </h1>
-
-                        {/* Price */}
-                        <div className="mb-6">
-                            <span className="inline-block bg-skin-rose text-white text-[13px] font-black px-4 py-1.5 rounded-full mb-3 tracking-wider shadow-lg border-2 border-white/30 animate-bounce-subtle">
-                                <i className="fas fa-gift mr-1"></i>新規オープン記念・特別価格
-                            </span>
-                            <div className="flex items-baseline justify-center sm:justify-start gap-2 flex-wrap">
-                                <div className="flex items-baseline gap-1 opacity-90 whitespace-nowrap">
-                                    <span className="text-[12px]">通常</span>
-                                    <span className="text-base sm:text-lg line-through">6,400円</span>
-                                </div>
-                                <i className="fas fa-caret-right text-skin-peach text-lg sm:text-xl drop-shadow-md hidden sm:block"></i>
-                                <div className="flex items-baseline gap-1 mt-1 whitespace-nowrap">
-                                    <span className="text-xl sm:text-2xl font-bold mt-2">初回</span>
-                                    <span className="font-black text-[48px] sm:text-[56px] tracking-tight leading-none drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)] text-[#FFA500]">1,980</span><span className="text-2xl sm:text-3xl font-bold text-[#FFA500]">円</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Badges */}
-                        <div className="flex flex-wrap gap-2">
-                            <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white shadow-[0_4px_12px_rgba(0,0,0,0.4)] text-[12px] md:text-[14px] font-black px-3 md:px-4 py-2 rounded-lg flex items-center gap-1.5 border-2 border-white/20">
-                                <i className="fas fa-crown text-yellow-200"></i>2026.6.1 OPEN
-                            </span>
-                            <span className="bg-white/20 backdrop-blur-md border-2 border-white/40 text-white shadow-lg text-[12px] md:text-[14px] font-black px-3 md:px-4 py-2 rounded-lg flex items-center gap-1.5">
-                                <i className="fas fa-notes-medical text-green-300"></i>各種保険適用
-                            </span>
-                            <span className="bg-white/20 backdrop-blur-md border-2 border-white/40 text-white shadow-lg text-[12px] md:text-[14px] font-black px-3 md:px-4 py-2 rounded-lg flex items-center gap-1.5">
-                                <i className="fas fa-sparkles text-blue-200"></i>清潔な院内
-                            </span>
-                            <span className="bg-white/20 backdrop-blur-md border-2 border-white/40 text-white shadow-lg text-[12px] md:text-[14px] font-black px-3 md:px-4 py-2 rounded-lg flex items-center gap-1.5">
-                                <i className="fas fa-parking text-yellow-200"></i>駐車場あり
-                            </span>
-                        </div>
-                    </div>
-                </div>
+            <div className="w-full">
+                <video src="./images/hero-new2.mp4" autoPlay muted loop playsInline className="w-full h-auto block" />
             </div>
         );
 
