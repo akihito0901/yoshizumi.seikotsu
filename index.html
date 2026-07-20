@@ -98,6 +98,18 @@
         }
         .fade-up.visible { opacity: 1; transform: translateY(0); }
 
+        @keyframes availability-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.06); opacity: 0.72; }
+        }
+        .availability-count {
+            animation: availability-pulse 1.25s ease-in-out infinite;
+            display: inline-block;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .availability-count { animation: none; }
+        }
+
         /* Rainbow border animation */
         .rainbow-card {
             position: relative;
@@ -618,6 +630,47 @@
             );
         };
 
+        /* ─── 今週の予約枠 ─── */
+        const AvailabilitySection = () => {
+            const ref = useFadeUp();
+            return (
+                <section ref={ref} className="fade-up w-full bg-skin-cream border-t-4 border-skin-blush">
+                    <div className="px-6 pt-12 pb-11 text-center">
+                        <div className="mb-6">
+                            <span className="inline-flex items-center gap-2 bg-skin-rose text-white text-xs font-black px-4 py-2 rounded-full tracking-widest shadow-[0_6px_18px_rgba(90,139,163,0.28)]">
+                                <i className="fas fa-calendar-check"></i>
+                                今週の予約受付中
+                            </span>
+                        </div>
+
+                        <p className="text-skin-dark font-bold text-lg mb-2 leading-relaxed">
+                            今週の予約は残り
+                        </p>
+                        <p className="mb-7 text-[#d9736e]">
+                            <span className="availability-count font-black text-[68px] leading-none tracking-tight">5</span>
+                            <span className="text-2xl font-black ml-1">名</span>
+                        </p>
+
+                        <div className="max-w-xs mx-auto mb-7 border-y border-skin-blush/60 py-5 text-left space-y-3">
+                            <p className="flex items-start gap-2 text-sm text-skin-dark font-bold leading-relaxed">
+                                <i className="fas fa-check-circle text-skin-rose mt-1 flex-shrink-0"></i>
+                                <span>夕方・土曜の予約枠は<br />早めに埋まる傾向があります</span>
+                            </p>
+                            <p className="flex items-start gap-2 text-sm text-skin-dark font-bold leading-relaxed">
+                                <i className="fas fa-check-circle text-skin-rose mt-1 flex-shrink-0"></i>
+                                <span>院長が最初から最後まで担当するため<br />ご案内できる人数を限定しています</span>
+                            </p>
+                        </div>
+
+                        <p className="text-[#d9736e] font-black text-xl mb-7">
+                            ご予約はお早めに！
+                        </p>
+                        <LineCTA />
+                    </div>
+                </section>
+            );
+        };
+
         /* ─── Footer ─── */
         const Footer = () => (
             <footer className="bg-skin-dark text-white/50 py-10 pb-28 text-center text-xs">
@@ -663,6 +716,7 @@
                     <BenefitSection />
                     <QASection />
 
+                    <AvailabilitySection />
                     <FinalCTA />
                     <Footer />
                     <StickyCTA />
